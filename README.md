@@ -22,25 +22,24 @@ The primary objective of this project is to develop an AI-based application that
 
 The project aims to:  
 
-1. **Detect Faces in Images or Videos**  
+>**Detect Faces in Images or Videos**  
    - Utilize **pre-trained face detection models** like **Haar cascades** or **deep learning-based detectors** (such as OpenCV’s DNN module or MTCNN).  
    - Process video streams in real time to identify and highlight faces.  
    
-2. **Enhance Face Detection Accuracy**  
+>**Enhance Face Detection Accuracy**  
    - Improve detection performance using advanced techniques like **MobileNet SSD** or **YOLO** for better speed and accuracy.  
    - Optimize detection in various lighting conditions and angles.  
 
-3. **Implement Face Recognition (Optional)**  
+>**Implement Face Recognition (Optional)**  
    - Use deep learning techniques such as **Siamese Networks** or **ArcFace** to recognize and differentiate individuals.  
    - Train the model to identify and verify faces from a given dataset.  
 
-4. **Provide Real-Time Processing**  
+>**Provide Real-Time Processing**  
    - Integrate the solution with a webcam or external camera to detect and recognize faces in real time.  
    - Apply performance optimizations to ensure smooth and efficient execution.  
 
-5. **Develop a Functional and Scalable System**  
+>**Develop a Functional and Scalable System**  
    - Ensure that the face detection and recognition system can be used for various applications like **security, authentication, attendance systems, and AI-based surveillance.**  
    - Implement a user-friendly interface for testing and deployment.  
-
-### **End Goal**  
+  
 This project will result in a **working AI-powered face detection and recognition application** that can accurately identify faces in images or video streams, with potential real-world applications in security, access control, and smart surveillance.

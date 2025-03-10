@@ -356,10 +356,11 @@ This project successfully demonstrates the implementation of real-time face dete
 The system works in real-time, making it highly applicable for various use cases, such as security surveillance, user authentication, human-computer interaction, and entertainment-based AR applications. The modularity of the project allows easy integration of advanced deep learning models for better accuracy and robustness in face detection.
 
 >**KEY TAKEWAYS**
-  -Accurate Face Detection: The project efficiently detects faces using both Haar cascades and deep learning-based methods.
-  -Live Video Processing: The system processes real-time video streams, making it practical for security and interactive applications.
-  -Augmented Reality Features: The project integrates AI filters that overlay virtual objects, showcasing real-time AR capabilities.
-  -Scalability and Future Enhancements: The system can be extended to include face recognition using deep learning models like ArcFace or Siamese Networks, improving security applications.
+   -Accurate Face Detection: The project efficiently detects faces using both Haar cascades and deep learning-based methods.
+   -Live Video Processing: The system processes real-time video streams, making it practical for security and interactive applications.
+   -Augmented Reality Features: The project integrates AI filters that overlay virtual objects, showcasing real-time AR capabilities.
+   -Scalability and Future Enhancements: The system can be extended to include face recognition using deep learning models like ArcFace or Siamese Networks, improving security applications.
+
 
   
 

@@ -16,7 +16,6 @@
 
 ### OBJECTIVE
 
-### **Objective of the Face Detection and Recognition Project**  
 
 The primary objective of this project is to develop an AI-based application that can **detect and recognize human faces** in images or real-time video streams. This involves using **computer vision and deep learning techniques** to accurately locate and identify faces.  
 
@@ -43,3 +42,39 @@ The project aims to:
    - Implement a user-friendly interface for testing and deployment.  
   
 This project will result in a **working AI-powered face detection and recognition application** that can accurately identify faces in images or video streams, with potential real-world applications in security, access control, and smart surveillance.
+
+
+### KEY ACTIVITIES
+ 
+
+>**Setup Environment**  
+   - Install **OpenCV, NumPy, dlib, face-recognition**.  
+   - Install **CMake** for `dlib` compatibility.  
+
+>**Load Images & Video**  
+   - Read images/videos using OpenCV.  
+   - Preprocess (grayscale conversion, resizing).  
+
+>**Face Detection**  
+   - Use **Haar cascades** or deep learning detectors.  
+   - Detect faces in images/videos in real time.  
+
+>**Face Recognition (Optional)**  
+   - Use **Siamese Networks, ArcFace**, or `face-recognition`.  
+   - Identify and label detected faces.  
+
+>**Real-Time Processing**  
+   - Capture and process webcam feed.  
+   - Apply detection and recognition in live video.  
+
+>**Apply AI Filters (Optional)**  
+   - Overlay sunglasses or cartoon effects.  
+   - Enhance visualization with creative filters.  
+
+>**Debugging & Optimization**  
+   - Fix errors and improve accuracy.  
+   - Optimize performance for real-time use.  
+
+>**Deployment & Future Enhancements**  
+   - Expand for **security, mobile, or web apps**.  
+   - Add more advanced AI-based recognition models. 🚀

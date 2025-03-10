@@ -1,0 +1,222 @@
+### Detects faces using OpenCV’s Haar Cascade
+
+import cv2
+
+# Load Haar cascade for face detection
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+
+# Open webcam (0 for default camera)
+cap = cv2.VideoCapture(0)
+
+while True:
+    # Read frame from webcam
+    ret, frame = cap.read()
+    if not ret:
+        break
+    
+    # Convert frame to grayscale
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # Detect faces
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+    
+    # Draw rectangles around faces
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+    
+    # Show output
+    cv2.imshow("Face Detection", frame)
+    
+    # Press 'q' to exit
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Face Detection with Pre-Trained Model (Haar Cascade)
+
+import cv2
+
+# Load the pre-trained face detection model
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Load an image
+img = cv2.imread("test.jpg")  # Replace with your image file
+
+# Convert image to grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Detect faces
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+
+# Draw rectangles around detected faces
+for (x, y, w, h) in faces:
+    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+# Show the output
+cv2.imshow("Face Detection", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## To test the Real Time Face Detection
+
+import cv2
+
+# Load the pre-trained face detection model
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Start webcam capture
+cap = cv2.VideoCapture(0)  # 0 for default webcam
+
+while True:
+    # Read frames from webcam
+    ret, frame = cap.read()
+    
+    # Convert frame to grayscale
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    
+    # Detect faces
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+
+    # Draw rectangles around detected faces
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+    # Display the output
+    cv2.imshow("Real-Time Face Detection", frame)
+
+    # Exit on pressing 'q'
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Release the webcam and close windows
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### To Captures video from your webcam and applies real-time filters
+
+import cv2
+
+# Open webcam
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break  # Exit if frame not captured
+
+    cv2.imshow("Webcam Feed", frame)  # Show the webcam feed
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### To add a Grayscale Filter as live filter
+
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
+    cv2.imshow("Grayscale Filter", gray)  # Display the grayscale frame
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### To apply a Cartoon Filter as live filter
+
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Convert to grayscale
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    blur = cv2.medianBlur(gray, 5)  # Apply a median blur
+    edges = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)
+
+    # Apply a bilateral filter to smooth colors
+    color = cv2.bilateralFilter(frame, 9, 300, 300)
+    
+    # Combine edges and color image
+    cartoon = cv2.bitwise_and(color, color, mask=edges)
+
+    cv2.imshow("Cartoon Filter", cartoon)  # Show the cartoon effect
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## To add Virtual sunglasses as live filter
+
+import cv2
+import numpy as np
+
+# Load face detection model
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+# Load sunglasses image
+sunglasses = cv2.imread("C:/Users/sruthi/OneDrive/Documents/sunglasses.png", -1)  # Read with alpha channel
+
+def add_sunglasses(frame):
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+
+    for (x, y, w, h) in faces:
+        sunglasses_resized = cv2.resize(sunglasses, (w, int(h / 3)))  # Resize sunglasses
+        sw, sh, sc = sunglasses_resized.shape
+
+        for i in range(sw):
+            for j in range(sh):
+                if sunglasses_resized[i, j, 3] != 0:  # Ignore transparent pixels
+                    frame[y + i, x + j] = sunglasses_resized[i, j, :-1]
+
+    return frame
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    frame = add_sunglasses(frame)
+    cv2.imshow("Sunglasses Filter", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### To check if the sunglasses (virtual image) loads correctly
+
+import cv2
+
+sunglasses = cv2.imread("sunglasses.png", -1)
+
+if sunglasses is None:
+    print("❌ Error: sunglasses.png not found or failed to load. Check the file path!")
+else:
+    print(f"✅ Image loaded successfully! Shape: {sunglasses.shape}")
+
+
+

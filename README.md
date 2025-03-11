@@ -14,7 +14,7 @@
 
 ### PROJECT : AI FACE DETECTION AND RECOGNITION APPLICATION USING PRE-TRAINED FACE DETECTIONS MODELS LIKE HAAR CASCADES, SIAMESE NETWORKS OR ARCFACE
 
-### OBJECTIVE
+## OBJECTIVE
 
 
 The primary objective of this project is to develop an AI-based application that can **detect and recognize human faces** in images or real-time video streams. This involves using **computer vision and deep learning techniques** to accurately locate and identify faces.  
@@ -42,6 +42,7 @@ The project aims to:
    - Implement a user-friendly interface for testing and deployment.  
   
 This project will result in a **working AI-powered face detection and recognition application** that can accurately identify faces in images or video streams, with potential real-world applications in security, access control, and smart surveillance.
+
 
 
 ### KEY ACTIVITIES
@@ -77,6 +78,7 @@ This project will result in a **working AI-powered face detection and recognitio
 >**DEPLOYMENT & FUTURE ENHANCEMENTS**  
    - Expand for **security, mobile, or web apps**.  
    - Add more advanced AI-based recognition models.
+
 
 
 ### TOOLS AND TECHNOLOGIES USED 
@@ -120,6 +122,7 @@ This project will result in a **working AI-powered face detection and recognitio
    - **Edge Detection & Image Processing**: For better visualization of facial features.  
 
 This project combines **Computer vision, deep learning, and AI** techniques to create a real-time face detection and recognition system. 
+
 
 
 ### IMPLEMENTATION
@@ -254,6 +257,7 @@ Use CMD to install required libraries:
 This project **Detects**, **Recognizes**, and **Applies filters** to faces in real-time using **OpenCV and face-recognition**.
 
 
+
 ### HOW IT WORKS?
 
 This project detects faces in real-time and applies AI filters using computer vision techniques. It uses OpenCV and deep learning-based models to process images or videos and identify human faces accurately.
@@ -342,6 +346,7 @@ In this project, I did not implement face recognition. However, if added, face r
     python live_filter.py
 
 This project successfully detects and enhances human faces in real-time, using AI and image processing techniques.
+
 
 
 ### OUTPUT

@@ -12,9 +12,10 @@
 ## OVERVIEW OF THE PROJECT
 
 
-### PROJECT : AI FACE DETECTION AND RECOGNITION APPLICATION USING PRE-TRAINED FACE DETECTIONS MODELS LIKE HAAR CASCADES, SIAMESE NETWORKS OR ARCFACE
+## PROJECT : AI FACE DETECTION AND RECOGNITION APPLICATION USING PRE-TRAINED FACE DETECTIONS MODELS LIKE HAAR CASCADES, SIAMESE NETWORKS OR ARCFACE
 
-## OBJECTIVE
+
+### OBJECTIVE
 
 
 The primary objective of this project is to develop an AI-based application that can **detect and recognize human faces** in images or real-time video streams. This involves using **computer vision and deep learning techniques** to accurately locate and identify faces.  
@@ -46,6 +47,7 @@ This project will result in a **working AI-powered face detection and recognitio
 
 
 ### KEY ACTIVITIES
+
  
 >**SETUP ENVIRONMENT**  
    - Install **OpenCV, NumPy, dlib, face-recognition**.  
@@ -82,6 +84,7 @@ This project will result in a **working AI-powered face detection and recognitio
 
 
 ### TOOLS AND TECHNOLOGIES USED 
+
 
 >**PROGRAMMING LANGUAGE**  
    - **Python**: Used for writing the entire AI application due to its strong libraries and frameworks for machine learning and image processing.  
@@ -126,6 +129,7 @@ This project combines **Computer vision, deep learning, and AI** techniques to c
 
 
 ### IMPLEMENTATION
+
 
 >**INSTALL DEPENDENCIES**
 
@@ -260,6 +264,7 @@ This project **Detects**, **Recognizes**, and **Applies filters** to faces in re
 
 ### HOW IT WORKS?
 
+
 This project detects faces in real-time and applies AI filters using computer vision techniques. It uses OpenCV and deep learning-based models to process images or videos and identify human faces accurately.
 
 ### FACE DETECTION (USING OPENCV HAAR CASCADES & DEEP LEARNING MODELS)
@@ -351,7 +356,10 @@ This project successfully detects and enhances human faces in real-time, using A
 
 ### OUTPUT
 
-![Screenshot 2025-03-11 133637](https://github.com/user-attachments/assets/ac7050f9-d0c6-4e24-b862-2ac295f9d8ee)
+
+1)
+
+![Screenshot 2025-03-11 133637](https://github.com/user-attachments/assets/946deb3c-4bfa-4ae1-b1a8-d755a2fe464d)
 
 The code of **test_opencv.py & face_detection.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
 
@@ -362,7 +370,55 @@ The above screenshot is the expected output of the face_detection.py. Here the i
 
 
 
+3)
 
+![Screenshot 2025-03-11 133920](https://github.com/user-attachments/assets/24ba155f-fe37-4135-8493-03ca96dd324d)
+
+The code of **real_time_face_detection.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
+
+
+![Screenshot 2025-03-11 134441](https://github.com/user-attachments/assets/fb00b6c7-03df-4f19-aef2-9d084ce1f5a7)
+
+The above screenshot is the expected output of the **real_time_face_detection.py**. Here the my face is being identified by covering the face with the **Green Rectangular box**, after executing the code in **VS Biuld Tools** and the command 'python real_time_face_detection.py' in **CMD**.
+
+
+
+4)
+
+![Screenshot 2025-03-11 134701](https://github.com/user-attachments/assets/b3bfa7c0-e67c-4329-a7fb-8d8b6bc8115d)
+
+The code of **grayscale_filter.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
+
+
+![Screenshot 2025-03-11 135429](https://github.com/user-attachments/assets/b982f7f6-2353-4c85-b5cc-cee7929da5b6)
+
+The above screenshot is the expected output of the **graysacle_filter.py**. Here the total screen is **turned into black and white**, which is the **Grayscale Filter**, after executing the code in **VS Biuld Tools** and the command 'python grayscale_filter.py' in **CMD**.
+
+
+
+5)
+
+![Screenshot 2025-03-11 135630](https://github.com/user-attachments/assets/29b799b6-0ea7-490a-8c37-9c55406f2365)
+
+The code of **cartoon_filter.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
+
+
+![Screenshot 2025-03-11 135721](https://github.com/user-attachments/assets/6f2b7be6-5f2b-45a4-a6fe-d2a52b01e61d)
+
+The above screenshot is the expected output of the **cartoon_filter.py**. Here the total screen is **turned into an animated filter**, which is the **Cartoon Filter**, after executing the code in **VS Biuld Tools** and the command 'python cartoon_filter.py' in **CMD**.
+
+
+
+6)
+
+![Screenshot 2025-03-11 135834](https://github.com/user-attachments/assets/b3310f72-bcb3-4bcb-a767-b744bbcddac6)
+
+The code of **virtual_sunglasses.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
+
+
+![Screenshot 2025-03-11 135931](https://github.com/user-attachments/assets/a4eac6b7-cf2b-485c-91b7-21f5d6f80378)
+
+The above screenshot is the expected output of the **virtual_sunglasses.py**. Here I have a sunglass, which **overlay in my forehead** and this is the **Virtual Sunglasses Filter**, after executing the code in **VS Biuld Tools** and the command 'python cartoon_filter.py' in **CMD**.
 
 
 

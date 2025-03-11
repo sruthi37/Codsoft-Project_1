@@ -310,7 +310,7 @@ In this project, I did not implement face recognition. However, if added, face r
 - Deep Learning Face Embeddings (e.g., **ArcFace, FaceNet, or dlib**)  
 - Face Distance Calculation for Recognition  
 
-**CMD COMMAND TO RUN (If Implemented):**  
+>**CMD Command to Run(If Implemented):**  
 
     python face_recognition.py
 
@@ -345,6 +345,18 @@ This project successfully detects and enhances human faces in real-time, using A
 
 
 ### OUTPUT
+
+![Screenshot 2025-03-11 133637](https://github.com/user-attachments/assets/ac7050f9-d0c6-4e24-b862-2ac295f9d8ee)
+
+The code of **test_opencv.py & face_detection.py** is executed in **VS build tools** and the above screenshot is about the command I used in the **CMD Prompt**, to get the expected output.
+
+
+![Screenshot 2025-03-11 133728](https://github.com/user-attachments/assets/d0494dae-7323-4ee0-8eb8-1c544703374d)
+
+The above screenshot is the expected output of the face_detection.py. Here the image's face is being identified by covering the face with the **Green Rectangular box**, after executing the code in **VS Biuld Tools** and the command 'python face_detection.py' in **CMD**.
+
+
+
 
 
 

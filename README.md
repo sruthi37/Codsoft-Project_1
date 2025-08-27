@@ -4,10 +4,6 @@
 
 **Domain   :** Artificial Intelligence
 
-**ID no    :** CS25RY17546
-
-**Duration :** 1st March - 31st March 2025
-
 
 ## OVERVIEW OF THE PROJECT
 

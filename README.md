@@ -1,7 +1,5 @@
 **Name     :** Sruthi R
 
-**Company  :** Codsoft Pvt Ltd
-
 **Domain   :** Artificial Intelligence
 
 
